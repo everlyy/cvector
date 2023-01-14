@@ -33,5 +33,17 @@ int main(void) {
 	vector_float_insert(&vector2, 2, 3.3);
 	vector_float_print(&vector2);
 
+	printf("\n");
+
+	vector_int_t vector3;
+	vector_int_init(&vector3);
+
+	for(size_t i = 0; i < 8; i++)
+		vector_int_append(&vector3, i);
+
+	vector_int_remove_at(&vector3, 3);
+	vector_int_insert(&vector3, 6, 100);
+	vector_int_print(&vector3);
+
 	return 0;
 }

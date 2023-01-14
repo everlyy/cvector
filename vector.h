@@ -59,6 +59,14 @@ void VECTOR_FUNCTION(insert)(STRUCT_NAME* vector, size_t index, VECTOR_TYPE valu
 	vector->elements[index] = value;
 }
 
+void VECTOR_FUNCTION(remove_at)(STRUCT_NAME* vector, size_t index) {
+	assert(vector);
+	assert(index < vector->length);
+
+	memmove(&vector->elements[index], &vector->elements[index + 1], (vector->length - index) * sizeof(VECTOR_TYPE));
+	vector->length--;
+}
+
 VECTOR_TYPE VECTOR_FUNCTION(at)(STRUCT_NAME* vector, size_t index) {
 	assert(vector);
 	assert(index < vector->length);
