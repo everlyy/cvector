@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define VECTOR_TYPE everly_uint
+#define VECTOR_TYPE int
 #define VECTOR_FMT "%d"
 #include "vector.h"
 
